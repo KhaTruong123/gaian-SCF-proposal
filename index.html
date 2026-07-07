@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gaian × Stellar — SCF Build Award Proposal (v7)</title>
+<title>Gaian × Stellar — SCF Build Award Proposal</title>
 <style>
   :root{
     --bg:#0a0e27; --panel:#111634; --ink:#eef2ff; --muted:#9aa6d6;
@@ -36,8 +36,7 @@
   .g{color:var(--green);font-weight:700}
   .b{color:var(--blue2)}
   .cols{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem}
-  .cols3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.2rem}
-  @media(max-width:820px){.cols,.cols3{grid-template-columns:1fr}}
+  @media(max-width:820px){.cols{grid-template-columns:1fr}}
   table{border-collapse:collapse;width:100%;margin:.5em 0;font-size:clamp(15px,1.6vw,18px)}
   th,td{text-align:left;padding:.5em .65em;border-bottom:1px solid var(--line);vertical-align:top}
   th{color:var(--muted);font-weight:600;font-size:.82em;text-transform:uppercase;letter-spacing:.04em}
@@ -51,6 +50,7 @@
   .big{font-size:clamp(30px,5vw,52px);font-weight:800;color:#fff;letter-spacing:-.02em;line-height:1.1}
   .big .g{color:var(--green)}
   .note{color:var(--muted);font-size:.88em;border-left:3px solid var(--line);padding-left:.9em;margin-top:.9em}
+  .warn{border-left-color:var(--green)}
   .foot{margin-top:1em;color:var(--muted);font-size:.85em}
   nav{position:fixed;bottom:16px;right:20px;display:flex;gap:8px;z-index:10}
   nav button{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:8px;width:38px;height:34px;font-size:16px;cursor:pointer}
@@ -68,12 +68,12 @@
   <!-- 1 · Hero -->
   <section class="slide active">
     <div class="kicker">SCF Build Award · Integration Track</div>
-    <h1>Vietnam's First VND Anchor<br>+ USDC Virtual Card Rail</h1>
-    <p class="lead">Gaian already moves real USDC on Stellar mainnet. This grant turns that private capability into public Stellar infrastructure — and extends it to a second ASEAN market.</p>
+    <h1>USDC Card Rail<br>+ Vietnam's First VND Anchor</h1>
+    <p class="lead">Gaian already moves real USDC on Stellar mainnet. This grant turns that into spendable money, public Stellar anchor infrastructure, and a direct ASEAN settlement corridor.</p>
     <p style="margin:1.3em 0 .3em">
       <span class="pill">4 months</span>
       <span class="pill">3 phases</span>
-      <span class="pill">Ask: <b class="g">$143,000</b></span>
+      <span class="pill">Ask: <b class="g">$148,000</b></span>
     </p>
     <div class="cols" style="margin-top:1.2em">
       <div class="card">
@@ -97,79 +97,102 @@
     <div class="cols" style="margin-top:.6em">
       <div class="card">
         <h3 style="margin-top:0">Demoed at a Stellar Developer Meeting, on mainnet</h3>
-        <p>Scan a Vietnamese QR → quote via Gaian's API → <strong>real USDC settles on Stellar mainnet</strong> → fiat pays out through a regulated PSP. On-chain, verifiable, in production.</p>
+        <p>Scan a Vietnamese QR → quote via Gaian's API → <strong>real USDC settles on Stellar mainnet</strong> → fiat pays out through a regulated provider. On-chain, verifiable, in production.</p>
       </div>
       <div class="card">
-        <h3 style="margin-top:0">What this grant funds</h3>
-        <p>That rail is a <strong>closed, custom integration</strong> — no third-party Stellar wallet can use it, because it doesn't yet speak Stellar's standard protocols (the SEPs).</p>
-        <p class="b">Standardizing it into a public anchor is the net-new work — a working system to standardize, not a build from zero.</p>
+        <h3 style="margin-top:0">Built on a proven foundation</h3>
+        <p>The underlying rail (settlement, USDC on mainnet) is real today.</p>
+        <p class="b">So both the card rail (Phase 1) and the anchor (Phase 2) are built on a working system — not from zero.</p>
       </div>
     </div>
-    <p class="note">Result: the largest phase carries the <strong>lowest delivery risk</strong> in the grant.</p>
   </section>
 
-  <!-- 3 · The Plan (merged scope + disbursement + milestone) -->
+  <!-- 3 · The Plan -->
   <section class="slide top">
     <div class="kicker">The plan · 3 phases · 4 months</div>
-    <h2>Scope, disbursement &amp; verifiable milestones</h2>
+    <h2>Scope, disbursement &amp; committed metrics</h2>
     <table>
-      <tr><th>Phase</th><th>Scope</th><th class="n">Amount</th><th>Verifiable milestone</th></tr>
+      <tr><th>Phase</th><th>Scope</th><th class="n">Amount</th><th>Committed milestone</th></tr>
       <tr>
-        <td class="ph">Phase 1<br><span style="color:var(--muted);font-weight:400">Mo 1–2</span></td>
-        <td><strong>Public Stellar Anchor + SDK.</strong> Standardize the live rail into SEP-1/10/12/24/38 so <strong>any</strong> wallet can on/off-ramp VND↔USDC; drop-in SDK + sandbox + docs.</td>
+        <td class="ph">Phase 1<br>Card<br><span style="color:var(--muted);font-weight:400">Mo 1</span></td>
+        <td><strong>USDC virtual card rail.</strong> Bridge Stellar USDC to a virtual card that spends anywhere Visa is accepted (live across 10+ countries). Built on Gaian's live rail.</td>
+        <td class="n">$35K</td>
+        <td>Card live on mainnet · <strong>50 users making USDC card payments</strong></td>
+      </tr>
+      <tr>
+        <td class="ph">Phase 2<br>Anchor + SDK<br><span style="color:var(--muted);font-weight:400">Mo 2–3</span></td>
+        <td><strong>Public Stellar anchor + SDK.</strong> Standardize the live rail into SEP-1/10/12/24/38 so <strong>any</strong> wallet can on/off-ramp VND↔USDC; drop-in SDK + sandbox + docs.</td>
         <td class="n">$75K</td>
-        <td>Anchor live on mainnet · <code>stellar.toml</code> published + registry-listed · <strong>an external Stellar wallet completes a VND↔USDC on/off-ramp</strong> · SDK sandbox live</td>
+        <td>Anchor on testnet + mainnet · SDK sandbox live · <strong>≥1 external Stellar wallet using the anchor</strong></td>
       </tr>
       <tr>
-        <td class="ph">Phase 2<br><span style="color:var(--muted);font-weight:400">Mo 3</span></td>
-        <td><strong>USDC virtual card rail.</strong> Bridge Stellar USDC to a virtual card that spends anywhere Visa is accepted (live across 10+ countries); settlement bridge from anchor balances; KYC reused from anchor.</td>
-        <td class="n">$30K</td>
-        <td><strong>≥1 successful USDC-funded card spend on mainnet</strong></td>
-      </tr>
-      <tr>
-        <td class="ph">Phase 3<br><span style="color:var(--muted);font-weight:400">Mo 4</span></td>
-        <td><strong>Philippine settlement corridor.</strong> Upgrade PH coverage to a <strong>root PSP</strong> — better fee &amp; speed; second ASEAN corridor reusing the Phase-1 anchor.</td>
+        <td class="ph">Phase 3<br>PH corridor<br><span style="color:var(--muted);font-weight:400">Mo 4</span></td>
+        <td><strong>Philippine direct settlement corridor.</strong> Integrate a direct, institution-grade payment provider (not a resold intermediary); second ASEAN corridor reusing the anchor.</td>
         <td class="n">$38K</td>
-        <td>PH corridor live on root PSP · <strong>≥1 settled PHP↔USDC corridor transaction</strong> on mainnet · docs shipped</td>
+        <td>Direct provider live · <strong>50 transactions paying Philippine merchants</strong></td>
       </tr>
-      <tr class="tot"><td colspan="2">Total ask</td><td class="n">$143K</td><td></td></tr>
+      <tr class="tot"><td colspan="2">Total ask · $10K disbursed on award to start Phase 1</td><td class="n">$148K</td><td></td></tr>
     </table>
   </section>
 
-  <!-- 4 · Budget breakdown -->
+  <!-- 4 · Budget -->
   <section class="slide top">
     <div class="kicker">Budget · breakdown of scope</div>
-    <h2>Where the $143K goes</h2>
+    <h2>Where the $148K goes</h2>
     <div class="cols">
       <div>
-        <h3>Phase 1 — Public Stellar Anchor + SDK · <span class="g">$75K</span></h3>
-        <table>
-          <tr><td>SEP-24 VND anchor — standards layer (SEP-10/12/24/38) + mainnet</td><td class="n">$40K</td></tr>
-          <tr><td>Anchor infra, security hardening &amp; SEP conformance testing</td><td class="n">$15K</td></tr>
-          <tr><td>Drop-in SDK + developer sandbox + documentation</td><td class="n">$20K</td></tr>
-        </table>
-        <h3>Phase 2 — USDC Virtual Card Rail · <span class="g">$30K</span></h3>
+        <h3>Phase 1 — USDC Virtual Card Rail · <span class="g">$35K</span></h3>
         <table>
           <tr><td>Card payment system commercial integration</td><td class="n">$20K</td></tr>
           <tr><td>USDC→card settlement engineering + reconciliation</td><td class="n">$10K</td></tr>
+          <tr><td>Card mainnet launch + pilot user onboarding</td><td class="n">$5K</td></tr>
+        </table>
+        <h3>Phase 3 — Philippine Direct Corridor · <span class="g">$38K</span></h3>
+        <table>
+          <tr><td>Direct institution-grade payment provider integration + corridor setup</td><td class="n">$18K</td></tr>
+          <tr><td>PHP corridor engineering (SEP-24/38 reuse, treasury, FX)</td><td class="n">$15K</td></tr>
+          <tr><td>Multi-corridor documentation + sandbox</td><td class="n">$5K</td></tr>
         </table>
       </div>
       <div>
-        <h3>Phase 3 — Philippine Settlement Corridor · <span class="g">$38K</span></h3>
+        <h3>Phase 2 — Public Stellar Anchor + SDK · <span class="g">$75K</span></h3>
         <table>
-          <tr><td>Root-PSP commercial integration + PHP corridor setup</td><td class="n">$18K</td></tr>
-          <tr><td>PHP corridor engineering (SEP-24/38 reuse, treasury, FX)</td><td class="n">$15K</td></tr>
-          <tr><td>Multi-corridor documentation + sandbox finalization</td><td class="n">$5K</td></tr>
+          <tr><td>SEP-24 VND anchor — standards layer (SEP-1/10/12/24/38) + mainnet</td><td class="n">$40K</td></tr>
+          <tr><td>Anchor infra, security hardening &amp; SEP conformance testing</td><td class="n">$15K</td></tr>
+          <tr><td>Drop-in SDK + developer sandbox + documentation</td><td class="n">$20K</td></tr>
         </table>
         <table style="margin-top:1.2em">
-          <tr class="tot"><td>Total ask</td><td class="n">$143K</td></tr>
+          <tr class="tot"><td>Total ask</td><td class="n">$148K</td></tr>
         </table>
         <p class="note">Priced by deliverable against market benchmarks for regulated payment integrations. No marketing/user-acquisition spend.</p>
       </div>
     </div>
   </section>
 
-  <!-- 5 · Why Gaian + Outcome -->
+  <!-- 5 · Why direct PH provider -->
+  <section class="slide">
+    <div class="kicker">Phase 3 · why it matters</div>
+    <h2>Why the Philippine corridor needs a direct provider</h2>
+    <p class="lead">Gaian's current Philippine coverage runs through a <strong>resold, non-direct</strong> provider — an intermediary layer meaning higher fees, slower settlement, and no direct control over the payout rail.</p>
+    <div class="cols" style="margin-top:1em">
+      <div class="card">
+        <h3 style="margin-top:0">This grant integrates a direct, institution-grade provider</h3>
+        <ul>
+          <li><strong>Lower fees</strong> — no intermediary markup</li>
+          <li><strong>Faster settlement</strong> — direct rail, not resold</li>
+          <li><strong>Regulatory-grade</strong> reliability + direct reconciliation</li>
+          <li>Control to scale <strong>real merchant payouts</strong> at volume</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Why it's a distinct deliverable</h3>
+        <p>A first-party settlement relationship is a fresh integration — new API, settlement, compliance, treasury — and it's what makes the corridor <strong>safe to build merchant payments on</strong>.</p>
+        <p class="b">Committed proof: 50 transactions paying Philippine merchants, settled from Stellar USDC.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · Why Gaian + Outcome -->
   <section class="slide top">
     <div class="kicker">Why Gaian · the outcome</div>
     <h2>Live infrastructure, direct Stellar fit</h2>
@@ -179,20 +202,20 @@
       <p><strong>Kelvin Truong</strong> — COO/CPO · payment infrastructure + product, ex-NAB</p>
       <p><strong>Engineering Team</strong> — 4+ engineers (senior payment, tech lead, developers)</p>
     </div>
-    <h3 style="margin-top:1.3em">In 4 months</h3>
+    <h3 style="margin-top:1.2em">In 4 months</h3>
     <table>
       <tr><th>Outcome</th><th>Today</th><th>Month 4</th></tr>
-      <tr><td>VND anchor (SEP-24, wallet-usable)</td><td>0</td><td class="g">1 — mainnet</td></tr>
       <tr><td>USDC spend rail</td><td>none</td><td class="g">live (card, 10+ countries)</td></tr>
-      <tr><td>ASEAN corridors on Stellar</td><td>private only</td><td class="g">VND + PHP (root PSP)</td></tr>
+      <tr><td>VND anchor (SEP-24, wallet-usable)</td><td>0</td><td class="g">1 — mainnet</td></tr>
+      <tr><td>ASEAN direct settlement corridor</td><td>resold only</td><td class="g">Philippines (direct provider)</td></tr>
     </table>
-    <p class="big" style="margin-top:.8em"><span class="g">$143K.</span> 4 months. Stellar's ASEAN payment foundation.</p>
+    <p class="big" style="margin-top:.8em"><span class="g">$148K.</span> 4 months. Stellar's ASEAN payment foundation.</p>
     <p class="foot">Gaian ships it. Let's build.</p>
   </section>
 
 </div>
 
-<div id="count">1 / 5</div>
+<div id="count">1 / 6</div>
 <nav>
   <button id="prev" aria-label="Previous">‹</button>
   <button id="next" aria-label="Next">›</button>
