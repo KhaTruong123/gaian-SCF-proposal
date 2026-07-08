@@ -7,7 +7,7 @@
 <style>
   :root{
     --bg:#0a0e27; --panel:#111634; --ink:#eef2ff; --muted:#9aa6d6;
-    --blue:#5b8cff; --blue2:#8ab0ff; --green:#4ade80; --line:#233065;
+    --blue:#5b8cff; --blue2:#8ab0ff; --green:#4ade80; --line:#233065; --strong:#ffffff;
   }
   *{box-sizing:border-box}
   html,body{margin:0;height:100%}
@@ -32,7 +32,7 @@
   .kicker{color:var(--green);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:14px;margin-bottom:1.1em}
   ul{margin:.3em 0;padding-left:1.15em}
   li{margin:.28em 0}
-  strong{color:#fff}
+  strong{color:var(--strong)}
   .g{color:var(--green);font-weight:700}
   .b{color:var(--blue2)}
   .cols{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem}
@@ -41,13 +41,13 @@
   th,td{text-align:left;padding:.5em .65em;border-bottom:1px solid var(--line);vertical-align:top}
   th{color:var(--muted);font-weight:600;font-size:.82em;text-transform:uppercase;letter-spacing:.04em}
   td.n,th.n{text-align:right;color:var(--green);font-weight:700;white-space:nowrap}
-  .tot td{border-top:2px solid var(--line);border-bottom:none;font-weight:800;color:#fff}
+  .tot td{border-top:2px solid var(--line);border-bottom:none;font-weight:800;color:var(--strong)}
   .tot td.n{color:var(--green)}
   .ph{color:var(--blue2);font-weight:700;white-space:nowrap}
   .card{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:1em 1.2em}
   .pill{display:inline-block;background:rgba(91,140,255,.14);border:1px solid var(--line);color:var(--blue2);
     border-radius:999px;padding:.22em .8em;font-size:.8em;font-weight:600;margin:.15em .3em .15em 0}
-  .big{font-size:clamp(30px,5vw,52px);font-weight:800;color:#fff;letter-spacing:-.02em;line-height:1.1}
+  .big{font-size:clamp(30px,5vw,52px);font-weight:800;color:var(--strong);letter-spacing:-.02em;line-height:1.1}
   .big .g{color:var(--green)}
   .note{color:var(--muted);font-size:.88em;border-left:3px solid var(--line);padding-left:.9em;margin-top:.9em}
   .warn{border-left-color:var(--green)}
@@ -57,8 +57,8 @@
   nav button:hover{border-color:var(--blue)}
   #count{position:fixed;bottom:20px;left:20px;color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums;z-index:10}
   #bar{position:fixed;top:0;left:0;height:3px;background:var(--blue);z-index:11;transition:width .3s}
-  :root[data-theme="light"]{--bg:#f6f8ff;--panel:#fff;--ink:#0c1330;--muted:#4a5580;--line:#d5ddf5}
-  @media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f8ff;--panel:#fff;--ink:#0c1330;--muted:#4a5580;--line:#d5ddf5}}
+  :root[data-theme="light"]{--bg:#f6f8ff;--panel:#fff;--ink:#0c1330;--muted:#4a5580;--line:#d5ddf5;--strong:#0c1330;--green:#15803d;--blue2:#2f5fd0;--blue:#2f5fd0}
+  @media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f8ff;--panel:#fff;--ink:#0c1330;--muted:#4a5580;--line:#d5ddf5;--strong:#0c1330;--green:#15803d;--blue2:#2f5fd0;--blue:#2f5fd0}}
 </style>
 </head>
 <body>
